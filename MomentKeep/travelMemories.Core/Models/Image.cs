@@ -1,4 +1,6 @@
-﻿namespace TravelMemories.Core.Models
+﻿using travelMemories.Core.Models;
+
+namespace TravelMemories.Core.Models
 {
     public class Image : BaseEntity
     {
@@ -14,7 +16,7 @@
         public Guid UserId { get; set; }
 
         // Navigation properties
-        public virtual Trip Trip { get; set; }
+        public virtual Folder Trip { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<ImageTag> ImageTags { get; set; }
     }

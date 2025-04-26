@@ -1,11 +1,12 @@
-﻿namespace TravelMemories.Core.DTOs.Image
+﻿using TravelMemories.Core.DTOs.Tag;
+
+public class ImageResponse
 {
-    public class ImageSearchResponse
-    {
-        public IEnumerable<ImageResponse> Images { get; set; }
-        public int TotalCount { get; set; }
-        public int Page { get; set; }
-        public int PageSize { get; set; }
-        public int TotalPages { get; set; }
-    }
+    public Guid Id { get; set; }
+    public string FileName { get; set; }
+    public string Url { get; set; }
+    public DateTime? TakenAt { get; set; }
+    public bool IsAiGenerated { get; set; }
+    public Guid? FolderId { get; set; }  
+    public List<TagResponse> Tags { get; set; } = new List<TagResponse>();
 }

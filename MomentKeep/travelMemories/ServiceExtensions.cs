@@ -1,6 +1,7 @@
 ﻿using Amazon.S3;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using MomentKeep.Service.Services;
 using System.Text;
 using TravelMemories.Core.Interfaces;
 using TravelMemories.Core.Interfaces.External;
@@ -47,7 +48,7 @@ namespace TravelMemories
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ITripService, TripService>();
+            services.AddScoped<IFolderService, FolderService>();
             services.AddScoped<IImageService, ImageService>();
             services.AddScoped<IAIImageService, AIImageService>();
 
@@ -59,7 +60,7 @@ namespace TravelMemories
             // Register repositories
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<ITripRepository, TripRepository>();
+            services.AddScoped<IFolderRepository, TripRepository>();
             services.AddScoped<IImageRepository, ImageRepository>();
             services.AddScoped<IAIImageRepository, AIImageRepository>();
             services.AddScoped<ITagRepository, TagRepository>();

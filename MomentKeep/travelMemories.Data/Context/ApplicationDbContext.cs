@@ -8,7 +8,7 @@ namespace TravelMemories.Data.Context
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Trip> Trips { get; set; }
+        public DbSet<Folder> Trips { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ImageTag> ImageTags { get; set; }
@@ -32,7 +32,7 @@ namespace TravelMemories.Data.Context
             });
 
             // Trip configuration
-            modelBuilder.Entity<Trip>(entity =>
+            modelBuilder.Entity<Folder>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).HasMaxLength(100).IsRequired();

@@ -1,15 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System.ComponentModel.DataAnnotations;
 
-namespace TravelMemories.Core.DTOs.Image
+public class ImageUploadRequest
 {
-    public class ImageUploadRequest
-    {
-        [Required]
-        public IFormFile[] Files { get; set; }
-
-        public Guid? TripId { get; set; }
-
-        public string[] Tags { get; set; }
-    }
+    public IFormFile File { get; set; }
+    public Guid? FolderId { get; set; } 
+    public List<string> Tags { get; set; } = new List<string>();
 }

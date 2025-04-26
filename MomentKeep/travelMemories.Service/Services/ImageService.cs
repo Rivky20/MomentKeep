@@ -11,14 +11,14 @@ namespace TravelMemories.Service.Services
     {
         private readonly IImageRepository _imageRepository;
         private readonly ITagRepository _tagRepository;
-        private readonly ITripRepository _tripRepository;
+        private readonly IFolderRepository _tripRepository;
         private readonly IUserService _userService;
         private readonly IS3Service _s3Service;
 
         public ImageService(
             IImageRepository imageRepository,
             ITagRepository tagRepository,
-            ITripRepository tripRepository,
+            IFolderRepository tripRepository,
             IUserService userService,
             IS3Service s3Service)
         {

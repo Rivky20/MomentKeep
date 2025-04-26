@@ -5,13 +5,13 @@ using TravelMemories.Data.Context;
 
 namespace TravelMemories.Data.Repositories
 {
-    public class TripRepository : Repository<Trip>, ITripRepository
+    public class TripRepository : Repository<Folder>, IFolderRepository
     {
         public TripRepository(ApplicationDbContext context) : base(context)
         {
         }
 
-        public async Task<Trip> GetTripWithDetailsAsync(Guid tripId)
+        public async Task<Folder> GetTripWithDetailsAsync(Guid tripId)
         {
             return await _context.Trips
                 .Include(t => t.User)
@@ -19,14 +19,14 @@ namespace TravelMemories.Data.Repositories
                 .SingleOrDefaultAsync(t => t.Id == tripId);
         }
 
-        public async Task<Trip> GetTripByShareIdAsync(Guid shareId)
+        public async Task<Folder> GetTripByShareIdAsync(Guid shareId)
         {
             return await _context.Trips
                 .Include(t => t.Images)
                 .SingleOrDefaultAsync(t => t.ShareId == shareId);
         }
 
-        public async Task<IEnumerable<Trip>> GetUserTripsAsync(Guid userId)
+        public async Task<IEnumerable<Folder>> GetUserTripsAsync(Guid userId)
         {
             return await _context.Trips
                 .Where(t => t.UserId == userId)
@@ -34,7 +34,7 @@ namespace TravelMemories.Data.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Trip> GetTripWithImagesAsync(Guid tripId)
+        public async Task<Folder> GetTripWithImagesAsync(Guid tripId)
         {
             return await _context.Trips
                 .Include(t => t.Images)

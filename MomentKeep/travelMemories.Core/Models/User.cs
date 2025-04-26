@@ -1,4 +1,6 @@
-﻿namespace TravelMemories.Core.Models
+﻿using travelMemories.Core.Models;
+
+namespace TravelMemories.Core.Models
 {
     public class User : BaseEntity
     {
@@ -11,7 +13,7 @@
         public int AiQuota { get; set; } = 50; // Default 50 AI images per month
 
         // Navigation properties
-        public virtual ICollection<Trip> Trips { get; set; }
+        public virtual ICollection<Folder> Trips { get; set; }
         public virtual ICollection<Image> Images { get; set; }
     }
 }

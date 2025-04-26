@@ -1,0 +1,5 @@
+C:\Users\user1\Desktop\פרקטיקוד\פרקטיקום\MomentKeep\TravelMemories.Core\obj\Debug\net9.0\TravelMemories.Core.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\פרקטיקוד\פרקטיקום\MomentKeep\TravelMemories.Core\obj\Debug\net9.0\TravelMemories.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\פרקטיקוד\פרקטיקום\MomentKeep\TravelMemories.Core\obj\Debug\net9.0\TravelMemories.Core.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\פרקטיקוד\פרקטיקום\MomentKeep\TravelMemories.Core\obj\Debug\net9.0\TravelMemories.Core.AssemblyInfo.cs
+C:\Users\user1\Desktop\פרקטיקוד\פרקטיקום\MomentKeep\TravelMemories.Core\obj\Debug\net9.0\TravelMemories.Core.csproj.CoreCompileInputs.cache
